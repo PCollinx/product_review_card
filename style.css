@@ -1,0 +1,158 @@
+:root {
+    --Dark_cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very_dark_blue: hsl(212, 21%, 14%);
+    --Dark_grayish_blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 87.5%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--Cream);
+    font-weight: 500;
+    
+}
+
+.section {
+    max-height: 700px;
+    max-width: 600px;
+    background-color: var(--White);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+.section__img {
+    border-radius: 10px 0 0 10px;
+    height: 400px;
+    background-image: url(img/image-product-desktop.jpg);
+    background-size: cover;
+    
+}
+.section__details {
+    padding: 2rem;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+
+}
+
+.detail__title {
+
+    font-weight: 400;
+    font-family: inherit;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--Dark_grayish_blue);
+
+}
+
+.detail__name {
+    font-size: 214%;
+    font-family: 'Fraunces', serif;
+    color: var(--Very_dark_blue);
+    line-height: 1;
+}
+
+.detail__text {
+    color: var(--Dark_grayish_blue);
+}
+
+.detail__price {
+    display: flex;
+    gap: 1.4rem;
+
+    font-size: 214%;
+    color: var(--Dark_cyan);
+    font-weight: 700;
+
+}
+
+.original__price {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--Dark_grayish_blue);
+    align-self: center;
+    text-decoration: line-through;
+
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: var(--Dark_cyan);
+    border: none;
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    color: var(--White);
+    cursor: pointer;
+    transition: all .2s;
+
+}
+.btn:hover {
+    background-color: hsl(158, 36%, 17%);
+}
+
+@media only screen and (max-width: 1200px) {
+    .section {
+        grid-template-columns: none;
+        height: 600px;
+        width: 400px;
+    }
+    .section__img {
+        height: 250px;
+        border-radius: 10px 10px 0 0;
+        background-image: url(img/image-product-mobile.jpg);
+        background-size: cover;
+    }
+    .section__details {
+        height: 350px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    html {
+        font-size: 60%;
+    }
+    .section {
+        height: 400px;
+        width: 250px;
+    }
+
+    .section__img {
+        height: 150px;
+    }
+    .section__details {
+        height: 250px;
+    }
+}
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
