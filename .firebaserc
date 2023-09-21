@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "chat-app-css-illustrator"
-  }
+    "default": "product-preview-card-99",
+    "product-card": "product-preview-card-99"
+  },
+  "targets": {},
+  "etags": {}
 }
